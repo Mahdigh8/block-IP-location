@@ -62,14 +62,14 @@ function storeDomainCountry(input_data, manual, blackList) {
 function deleteDomainCountry(country_name){
 
 	var key = "";
-	var flag = country_name.includes("bl-");
+	var flag = country_name.includes("bl-list-");
 
 	if(flag){
 		key = "bl_country_domain";
-		country_name = country_name.replace("bl-", "");
+		country_name = country_name.replace("bl-list-", "");
 	}else{
 		key = "wl_country_domain";
-		country_name = country_name.replace("wl-", "");
+		country_name = country_name.replace("wl-list-", "");
 	}
 
 	chrome.storage.local.get(key, function(result){

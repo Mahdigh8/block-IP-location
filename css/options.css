@@ -1,52 +1,105 @@
+@font-face {
+  font-family: simonetta-italic;
+  src: url(fonts/Simonetta-Italic.ttf);
+}
+
+@font-face {
+  font-family: exo2;
+  src: url(fonts/Exo2-Medium.ttf);
+}
 
 *{
-	font-family: 'Dosis', sans-serif;
+	font-family: exo2;
 	color:#515151;
 }
 
-#bl {
-	grid-area: bl;
-	text-align: center;
-	overflow-y: scroll;
-	max-height: 450px;
-}
-
-#wl {
-	grid-area: wl;
-	text-align: center;
-	max-height: 450px;
-	overflow-y: scroll;
-}
-
-#item3 {
-	grid-area: bladd;
-	text-align: center;
-}
-
-#item4 {
-	grid-area: wladd;
-	text-align: center;
-}
-
-#item5 {
-	grid-area: message;
-	text-align: center;
-}
-
-#item6 {
-	grid-area: save;
-	text-align: center;
+h2{
+	font-family: simonetta-italic;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .container{
 	display: grid;
 	grid-template-areas:
-	'message message message message message message'
-	'bl bl bl wl wl wl'
-	'bladd bladd save save wladd wladd';
+	'message'
+	'content'
+	'buttons';
 	grid-gap: 20px;
-	/*background-color: #2196F3;*/
 	padding: 10px;
+}
+
+#message{
+	grid-area: message;
+	text-align: center;
+	height: 15px;
+}
+
+#content{
+	grid-area: content;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-areas:
+	'bl wl'
+	'bl-list wl-list'
+	'bl-list wl-list';
+	grid-gap: 20px;
+	padding: 10px;
+	height: 450px;
+	max-height: 450px;
+	text-align: center;
+}
+
+#bl{
+	grid-area: bl;
+}
+
+#wl{
+	grid-area: wl;
+}
+
+#bl-list{
+	grid-area: bl-list;
+	overflow-y: auto;
+	align-items: start;
+}
+
+#wl-list{
+	grid-area: wl-list;
+	overflow-y: auto;
+	align-items: start;
+}
+
+#buttons{
+	grid-area: buttons;
+	display: grid;
+	grid-template-areas:
+	'item1 item2 item3';
+	grid-gap: 20px;
+	padding: 10px;
+	height: 60px;
+	text-align: center;
+}
+
+#item1{
+	grid-area: item1;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#item2{
+	grid-area: item2;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#item3{
+	grid-area: item3;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
 }
 
 .delete{

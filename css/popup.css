@@ -1,9 +1,20 @@
-*{
-	font-family: 'Dosis', sans-serif;
+@font-face {
+  font-family: simonetta-italic;
+  src: url(fonts/Simonetta-Italic.ttf);
+}
+
+@font-face {
+  font-family: exo2;
+  src: url(fonts/Exo2-Medium.ttf);
+}
+
+* {
+	font-family: exo2;
 	color:#515151;
 }
 
 h1{
+	font-family: simonetta-italic;
 	color:#bc2122;
 }
 
@@ -17,8 +28,12 @@ a{
 }
 button{
 	width:200px;
-	font-size:15px;
+	font-size: 15px;
 }
 .underlink {
 	text-decoration: underline;
+}
+
+sub{
+	font-size: 15px;
 }

@@ -21,6 +21,7 @@
 	   "storage",
 	   "activeTab",
 	   "alarms",
+	   "nativeMessaging",
 	   "tabs"
 	],
 	"options_ui": {
